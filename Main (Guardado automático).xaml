@@ -90,7 +90,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Aprendiendo_RPA" sap:VirtualizedContainerService.HintSize="242,1656" sap2010:WorkflowViewState.IdRef="Sequence_15">
+  <Sequence DisplayName="Aprendiendo_RPA" sap:VirtualizedContainerService.HintSize="242,1627" sap2010:WorkflowViewState.IdRef="Sequence_15">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="varTextoAEscribir" />
     </Sequence.Variables>
@@ -100,7 +100,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Ciclos" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence DisplayName="Ciclos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -108,7 +108,56 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>
-    <Sequence DisplayName="Decisiones" sap:VirtualizedContainerService.HintSize="526,404" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Lectura de Imágenes" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence DisplayName="Base de datos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence DisplayName="correos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence DisplayName="Interactuar con Excel" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence DisplayName="Datatable" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence DisplayName="Interacción Navegador web" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence DisplayName="DataScrapping" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence DisplayName="Decisiones" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="varRespuestaDelUsuario" />
       </Sequence.Variables>
@@ -118,75 +167,52 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Cuadro de diálogo de entrada" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Qué edad tienes?" Title="Solicitar edad">
+      <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Actividades ignoradas" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Cuadro de diálogo de entrada" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Qué edad tienes?" Title="Solicitar edad">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[varRespuestaDelUsuario]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Actividades ignoradas" sap2010:WorkflowViewState.IdRef="Sequence_24">
+            <If Condition="[Int32.Parse(varRespuestaDelUsuario) &gt;= 18]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Eres mayor de edad&quot;]" />
+              </If.Then>
+              <If.Else>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Eres menor de edad &quot;]" />
+              </If.Else>
+            </If>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Cuadro de diálogo de entrada" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Dime que parametro magico quieres A, B, ó C" Title="Hacer magia ">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:String">[varRespuestaDelUsuario]</OutArgument>
         </ui:InputDialog.Result>
       </ui:InputDialog>
-      <If Condition="[Int32.Parse(varRespuestaDelUsuario) &gt;= 18]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="484,220" sap2010:WorkflowViewState.IdRef="If_1">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <If.Then>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Eres mayor de edad&quot;]" />
-        </If.Then>
-        <If.Else>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Eres menor de edad &quot;]" />
-        </If.Else>
-      </If>
+      <Switch x:TypeArguments="x:String" DisplayName="Cambiar" Expression="[varRespuestaDelUsuario]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+        <Switch.Default>
+          <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;El valor proporcionado no es una opción&quot;]" />
+        </Switch.Default>
+        <ui:LogMessage x:Key="A" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Hola Yefferson haces Magia&quot;]" />
+        <ui:LogMessage x:Key="B" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Adios Magico&quot;]" />
+        <ui:LogMessage x:Key="C" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Este es un saludo desde el Switch ó Cambiar en español&quot;]" />
+      </Switch>
     </Sequence>
-    <Sequence DisplayName="Lectura de Imágenes" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
-    <Sequence DisplayName="Base de datos" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_7">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
-    <Sequence DisplayName="correos" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_8">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
-    <Sequence DisplayName="Interactuar con Excel" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_9">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
-    <Sequence DisplayName="Datatable" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_10">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
-    <Sequence DisplayName="Interacción Navegador web" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_14">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
-    <Sequence DisplayName="DataScrapping" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_11">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
-    <Sequence DisplayName="Aprendiendo de Variables" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <Sequence DisplayName="Aprendiendo de Variables" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_12">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="varcontadorPalabras" />
       </Sequence.Variables>
@@ -214,7 +240,7 @@
       </Assign>
       <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[varTextoAEscribir]" />
     </Sequence>
-    <Sequence DisplayName="Codificando" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="Codificando" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="s:String[]" Name="arrayPalabrasClave" />
         <Variable x:TypeArguments="x:Int32" Name="varCantidadArchivos" />
@@ -244,7 +270,7 @@
       </Assign>
       <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Enconte &quot; + varCantidadArchivos.ToString + &quot; archivos en la ruta &quot;]" />
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke EscribirHolaMundo workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="XAMLCreadosEnElCurso\EscribirHolaMundo.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke EscribirHolaMundo workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="XAMLCreadosEnElCurso\EscribirHolaMundo.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="var_textoAEscribir">Hola mundo desde XAML</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -255,7 +281,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Lectura de PDF" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Lectura de PDF" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="varTextoDeLaImagen" />
         <Variable x:TypeArguments="ui:Image" Name="varImagen" />
@@ -380,7 +406,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
     </Sequence>
-    <Sequence DisplayName="Abrir Aplicación y Escribir" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence DisplayName="Abrir Aplicación y Escribir" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -416,7 +442,7 @@
         </ui:OpenApplication.Body>
       </ui:OpenApplication>
     </Sequence>
-    <Sequence DisplayName="Selectores" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="Selectores" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
